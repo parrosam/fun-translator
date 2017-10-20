@@ -1,0 +1,10 @@
+{
+  "name": "french-translator-joke",
+  "main": "server.js",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10"
+  }
+}
