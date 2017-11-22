@@ -8,7 +8,7 @@ var translator = function(){
 
     let TranslatorBaseUrl = "https://api.microsofttranslator.com/V2/Http.svc/Translate";
 
-    var x = function(to, from, text){        
+    var azureTranslate = function(to, from, text){        
         var url = TranslatorBaseUrl + "?text=" + text + "&from=" + from + "&to=" + to + "&appid=";
         
         var headers = {};
@@ -43,7 +43,7 @@ var translator = function(){
     };
 
     return {
-        trans: x
+        translate: azureTranslate
     };
 }();
 

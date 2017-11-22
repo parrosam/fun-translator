@@ -1,22 +1,36 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>French Translations!</title>
-        <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-    </head>
-    <body>        
-      <div class="content-area">      
-        <h1 >Wolffe. Translations</h1>
-        <textarea
-          cols="40"
-          rows="5"
-          autocomplete="off" 
-          spellcheck 
-          required 
-          autofocus
-          placeholder="Enter text to translate."></textarea>      
-      </div>
-      <!-- Load scripts -->
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>French Translations!</title>
+    <meta name="description" content="French translator using Azure Cognitive Services">
+    <meta name="author" content="Sam Parrotte">
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>        
+    <div class="container">     
+        <h1 class="font_baloo">Wolffe. Translations</h1>
+        <div class="row">
+            <textarea
+                class="one-half column"
+                autocomplete="off" 
+                spellcheck 
+                required 
+                autofocus
+                placeholder="Enter text to translate."></textarea>                
+            <textarea
+                class="one-half column"
+                autocomplete="off"
+                disabled></textarea>
+        </div>            
+        <button class="button-primary">Translate</button>
+    </div> 
+    <!-- Load scripts -->
+</body>
 </html>
