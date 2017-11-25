@@ -21,7 +21,7 @@ module.exports = function(app){
             return;
         }
 
-        translator.trans('fr', 'en', req.query.text)
+        translator.translate('fr', 'en', req.query.text)
             .then(function (resp){
                 res.json(resp);
             });
