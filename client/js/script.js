@@ -13,14 +13,23 @@ function getTranslation(){
     }
 }
 
-function updateTranslation(){
-    document.getElementById("translated-textarea").value = this.responseText;
+function updateTranslation(httpRequest){
+    document.getElementById("translated-textarea").value = httpRequest.responseText;
 }
 
-
-function httpGetAsync(url, fn){
+function httpGetAsync(url, callback){
     let httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = fn;
+    httpRequest.onreadystatechange = function(){
+        if (httpRequest.readyState != 4) 
+            return;
+		if (httpRequest.status != 200 && httpRequest.status != 304) {
+			console.error('HTTP error ' + httpRequest.status);
+			return;
+        }
+
+        callback(httpRequest);
+        
+    }
     httpRequest.open('GET', url);
     httpRequest.send();
 }
