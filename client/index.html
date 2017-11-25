@@ -15,22 +15,25 @@
 </head>
 <body>        
     <div class="container">     
-        <h1 class="font_baloo">Wolffe. Translations</h1>
+        <h2 class="font_baloo">Wolffe. Translations</h1>
+        <button id="translate-button-mobile" class="button-primary u-full-width">Translate</button>
         <div class="row">
             <textarea
+                id="input-textarea"
                 class="one-half column"
                 autocomplete="off" 
-                spellcheck 
-                required 
-                autofocus
+                spellcheck  
+                autofocus                
                 placeholder="Enter text to translate."></textarea>                
             <textarea
+                id="translated-textarea"
                 class="one-half column"
                 autocomplete="off"
                 disabled></textarea>
         </div>            
-        <button class="button-primary">Translate</button>
+        <button id="translate-button" class="button-primary">Translate</button>
     </div> 
     <!-- Load scripts -->
+    <script src="js/script.js"></script>
 </body>
 </html>
