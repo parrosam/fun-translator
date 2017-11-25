@@ -1,5 +1,5 @@
 var FakeTranslationArray = require('./constants/fakeTranslations');
-var translator = require('./translator');
+var translate = require('./translator');
 
 module.exports = function(app){
     
@@ -21,9 +21,9 @@ module.exports = function(app){
             return;
         }
 
-        translator.translate('fr', 'en', req.query.text)
+        translate('fr', 'en', req.query.text)
             .then(function (resp){
-                res.json(resp);
+                res.send(resp);
             });
         });
 }
