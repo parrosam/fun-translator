@@ -19,9 +19,6 @@ var translator = function(){
         };
         
         return rp(options)
-            .then(function(resp){
-                return resp;
-            })
             .then(function(xml){                
                 return new Promise(function(resolve, reject){                    
                     xmlParse(xml, function(err, result){
@@ -29,13 +26,10 @@ var translator = function(){
                             reject(err);
                         }   
                         else{
-                            resolve(result);
+                            resolve(result.string._);
                         }
                     });
                 });
-            })
-            .then(function(result){                
-                return result.string._;
             })
             .catch(function (err){
                 return err;
